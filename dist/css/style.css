@@ -1,0 +1,725 @@
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
+/*
+ *  Owl Carousel - Core
+ */
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+
+.no-js .owl-carousel {
+  display: block;
+}
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item .owl-lazy[src^=""],
+.owl-carousel .owl-item .owl-lazy:not([src]) {
+  max-height: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms ease;
+  transition: -webkit-transform 100ms ease;
+  -o-transition: transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3, 1.3);
+      -ms-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  src: url("../fonts/Varelaround.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+}
+
+html input,
+html select,
+html button,
+html textarea,
+body input,
+body select,
+body button,
+body textarea {
+  font-family: 'Varela Round', sans-serif;
+}
+
+html h1,
+body h1 {
+  font-size: 69px;
+  line-height: 83px;
+  color: #FFFFFF;
+  margin: 0;
+  font-weight: 400;
+}
+
+html h3,
+body h3 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+html .blue,
+body .blue {
+  color: #169EAC;
+}
+
+html .white,
+body .white {
+  color: #fff;
+}
+
+html .btn,
+body .btn {
+  padding: 12px 42px;
+  border-radius: 5px;
+  background: #797979;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: 400;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+html .btn_blue,
+body .btn_blue {
+  background: #169EAC;
+}
+
+html .d-flex,
+body .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .fw-wrap,
+body .fw-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html .jc-between,
+body .jc-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html .jc-center,
+body .jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .align-center,
+body .align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .t-center,
+body .t-center {
+  text-align: center;
+}
+
+html header,
+body header {
+  height: 98px;
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: auto;
+  border-bottom: 3px solid rgba(234, 253, 255, 0.21);
+}
+
+html header nav,
+body header nav {
+  border-bottom: 2px solid rgba(234, 253, 255, 0.21);
+  width: 100%;
+}
+
+html header nav a,
+body header nav a {
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 10px 23px;
+}
+
+html header nav .btn,
+body header nav .btn {
+  padding: 10px 32px;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.home_page .d_link a {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #169EAC;
+  text-decoration: none;
+}
+
+.home_page .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 974px;
+  margin-top: -102px;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, -o-linear-gradient(206.29deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, linear-gradient(243.71deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background-size: cover;
+}
+
+.home_page .one .description {
+  font-size: 40px;
+  line-height: 48px;
+  margin: 14px 0 0;
+}
+
+.home_page .one .gradient {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #6b6b6b), color-stop(30%, #343434), color-stop(75%, #c9c9c9));
+  background: -o-linear-gradient(left, #6b6b6b 0, #343434 30%, #c9c9c9 75%);
+  background: linear-gradient(90deg, #6b6b6b 0, #343434 30%, #c9c9c9 75%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.home_page .one .gradient span {
+  font-size: 50px;
+}
+
+.home_page .one .btns a {
+  margin: 10px;
+}
+
+.home_page .two {
+  background: url("../img/home/home_two_bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 130px 0;
+}
+
+.home_page .two .container {
+  max-width: 1480px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.home_page .two .container .item {
+  max-width: 276px;
+}
+
+.home_page .two .container .item .title {
+  font-size: 27px;
+  line-height: 33px;
+  max-width: 200px;
+  margin: 20px auto 0;
+}
+
+.home_page .two .container .item .description {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.home_page .three {
+  background: #050505;
+  padding: 35px 0 75px;
+}
+
+.home_page .three .container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.home_page .three .container h4 {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 400;
+}
+
+.home_page .three .container .block {
+  width: 50%;
+}
+
+.home_page .three .container .block label {
+  margin-left: 54px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.home_page .three .container .block select {
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  width: 220px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 8px;
+  border: 1px solid #787878;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.home_page .three .container .block input {
+  border-radius: 5px;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  border: 1px solid #787878;
+  font-size: 22px;
+  line-height: 26px;
+  width: 90px;
+}
+
+.home_page .three .container .block button {
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 5.5px 35px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.home_page .four {
+  background: #272525;
+  padding: 10px 0 40px;
+}
+
+.home_page .four .container {
+  max-width: 1680px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.home_page .four .container .item {
+  max-width: 160px;
+  margin: 5px 8px;
+}
+
+.home_page .four .container .item img {
+  width: 100%;
+}
+
+.home_page .five {
+  background: url("../img/home/home_two_bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+}
+
+.home_page .five .container {
+  max-width: 1480px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.home_page .five .container h3 {
+  margin-bottom: 60px;
+}
+
+.home_page .five .container .item {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home_page .five .container .item .block {
+  max-width: 300px;
+}
+
+.home_page .five .container .item .block img {
+  max-width: 130px;
+  margin: 0 auto 30px;
+}
+
+.home_page .five .container .owl-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home_page .five .container .owl-nav button {
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.home_page .five .container .owl-nav button.owl-prev {
+  top: 60px;
+  position: absolute;
+  right: -30px;
+}
+
+.home_page .five .container .owl-nav button.owl-next {
+  top: 60px;
+  position: absolute;
+  left: -30px;
+}
+
+.home_page .five .container .owl-nav button:hover {
+  background: none;
+}
+
+.home_page .five .container .owl-nav button:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.home_page .five .container .d_link {
+  font-weight: normal;
+  font-size: 31px;
+  line-height: 37px;
+  color: #FFFFFF;
+}
