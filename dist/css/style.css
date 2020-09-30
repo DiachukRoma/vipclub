@@ -482,6 +482,50 @@ body header nav .btn {
   margin: 0;
 }
 
+html footer,
+body footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 0;
+}
+
+html footer .container,
+body footer .container {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+html footer .container ul,
+body footer .container ul {
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+html footer .container ul li a,
+body footer .container ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+html footer .container .copy_social,
+body footer .container .copy_social {
+  border-top: 3px solid #3a3a3a;
+  margin-top: 50px;
+  padding: 20px 0 0;
+}
+
+html footer .container .copy_social .social a,
+body footer .container .copy_social .social a {
+  margin-left: 60px;
+}
+
 .home_page .d_link a {
   font-weight: 400;
   font-size: 30px;
@@ -722,4 +766,107 @@ body header nav .btn {
   font-size: 31px;
   line-height: 37px;
   color: #FFFFFF;
+}
+
+.about_page .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 974px;
+  margin-top: -102px;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, -o-linear-gradient(206.29deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, linear-gradient(243.71deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background-size: cover;
+}
+
+.about_page .one .container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.about_page .one .container .row {
+  max-width: 630px;
+}
+
+.about_page .one .container .row .description {
+  font-size: 26px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.about_page .two {
+  background: url("../img/about/two_bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 100px 15px;
+}
+
+.about_page .two p {
+  color: #fff;
+  font-size: 23px;
+  text-align: center;
+  max-width: 530px;
+  margin: auto;
+}
+
+.about_page .three {
+  background: url("../img/about/three_bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 70px 15px 120px;
+}
+
+.about_page .three p {
+  color: #fff;
+  font-size: 20px;
+  max-width: 590px;
+  margin: auto;
+}
+
+.about_page .three .row:last-child {
+  margin-top: 130px;
+}
+
+.about_page .three .row:last-child a {
+  margin-right: 20px;
+}
+
+.members_page .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 974px;
+  margin-top: -102px;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, -o-linear-gradient(206.29deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background: url("../img/home/home_one_bg.png") center center no-repeat, linear-gradient(243.71deg, rgba(0, 0, 0, 0.7296) 50.99%, rgba(90, 91, 94, 0.4256) 98.55%), url("../img/home/home_one.png") center center no-repeat;
+  background-size: cover;
+}
+
+.members_page .one .container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.members_page .one .container .row {
+  max-width: 630px;
+}
+
+.members_page .one .container .row .description {
+  font-size: 26px;
+  line-height: 36px;
+  color: #fff;
 }
