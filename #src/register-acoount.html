@@ -8,26 +8,95 @@
                 <div class="block block_form">
                     <form action="#" class="form_acoount">
                         <h3 class="blue">פתיחת חשבון</h3>
-                        <p class="description">ומצאו את הסידור המושלם!הצטרפו עכשיו חינם לשוגר דדי</p>
-                        <p class="baby_type">
-                            <span class="typeRadio">מסוג:</span>
 
-                            <input type="radio" name="baby" id="type_1" value="value_1" checked>
-                            <label for="type_1">שוגר מאמי</label>
+                        <div class="question_1" style="display: none;">
+                            <p class="description">ומצאו את הסידור המושלם!הצטרפו עכשיו חינם לשוגר דדי</p>
+                            <p class="baby_type">
+                                <span class="typeRadio">מסוג:</span>
 
-                            <span class="separator">או</span>
+                                <input type="radio" name="baby" id="type_1" value="value_1" checked>
+                                <label for="type_1">שוגר מאמי</label>
 
-                            <input type="radio" name="baby" id="type_2" value="value_2">
-                            <label for="type_2">שוגר בייבי</label>
-                        </p>
-                        <p>
-                            <label for="what">
-                                <input type="checkbox" name="what" id="what">
-                                מה זה אומר
-                            </label>
-                        </p>
-                        <p class="description">שוגר בייבי - בחורה אטרקטיבית המחפשת קשר עם גבר נדיב (שוגר דדי) בתמורה לפינוקים ומתנות</p>
-                        <p class="description">שוגר מאמי - בחורה נדיבה שמעניקה תמיכה ופינוקים לבחורה (שוגר בייבי) בתמורה לידידות</p>
+                                <span class="separator">או</span>
+
+                                <input type="radio" name="baby" id="type_2" value="value_2">
+                                <label for="type_2">שוגר בייבי</label>
+                            </p>
+                            <p>
+                                <label for="what">
+                                    <input type="checkbox" name="what" id="what">
+                                    מה זה אומר
+                                </label>
+                            </p>
+                            <p class="description">שוגר בייבי - בחורה אטרקטיבית המחפשת קשר עם גבר נדיב (שוגר דדי) בתמורה
+                                לפינוקים ומתנות</p>
+                            <p class="description">שוגר מאמי - בחורה נדיבה שמעניקה תמיכה ופינוקים לבחורה (שוגר בייבי)
+                                בתמורה לידידות</p>
+                        </div>
+
+                        <div class="question_2" style="display: none;">
+                            <p class="description">ומצאו את הסידור המושלם!</p>
+                            <p class="baby_type">
+                                <span class="typeRadio">מתעניין/ת ב:</span>
+
+                                <input type="radio" name="gender" id="men" value="1" checked>
+                                <label for="men">גברים</label>
+
+                                <span class="separator">או</span>
+
+                                <input type="radio" name="gender" id="woman" value="2">
+                                <label for="woman">נשים</label>
+
+                                <span class="separator">או</span>
+
+                                <input type="radio" name="gender" id="both" value="3">
+                                <label for="both">שניהם</label>
+                            </p>
+                        </div>
+
+                        <div class="question_3">
+                            <p class="description">ומצאו את הסידור המושלם!</p>
+                            <div class="baby_type">
+                                <div class="wrap d-flex jc-between">
+                                    <div class="wrap_block"><span class="typeRadio">תאריך לידה:</span></div>
+                                    <div class="wrap_block"><input type="date" name="birthday" id="birthday"></div>
+                                </div>
+                                <div class="wrap d-flex jc-between">
+                                    <div class="wrap_block"><span class="typeRadio">דוא"ל:</span></div>
+                                    <div class="wrap_block"><input type="email" name="email" id="email">
+                                        <small>*מילוי אימייל תקין נחוץ להשלמת ההרשמה</small></div>
+                                </div>
+                                <div class="wrap d-flex jc-between">
+                                    <div class="wrap_block"><span class="typeRadio">כינוי:</span></div>
+                                    <div class="wrap_block"><input type="text" name="nickname" id="nickname"
+                                            placeholder="בעל 5-15 תווים"></div>
+                                </div>
+                                <div class="wrap d-flex jc-between">
+                                    <div class="wrap_block"><span class="typeRadio">סיסמא:</span></div>
+                                    <div class="wrap_block"><input type="password" name="password" id="password"> </div>
+                                </div>
+                                <div class="wrap d-flex jc-between">
+                                    <div class="wrap_block"><span class="typeRadio">עיר מגורים:</span></div>
+                                    <div class="wrap_block"><input type="text" name="address" id="address">
+                                        <small>*אנא המתינו להשלמה אוטומטית</small></div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="wrap_block">
+                                        <label for="term">
+                                            <input type="checkbox" name="term" id="term" required>
+                                            אני מאשר שקראתי והסכמתי ל תנאי השימוש
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="wrap_block">
+                                        <p class="description">בתשלום וכי השימוש באתר הוא מגיל 18 ומעלה. <br>
+                                            ידוע לי שחל איסור לפרסם שירותי מין</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>

@@ -992,12 +992,31 @@ body footer .container .copy_social .social a {
   margin-bottom: 0px;
 }
 
+.reg_account_page .one .container .block .form_acoount .baby_type .wrap .wrap_block {
+  margin-top: 20px;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type .wrap .wrap_block:first-child {
+  width: 100%;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type .wrap .wrap_block label[for="term"] {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type .wrap .wrap_block label[for="term"]::before {
+  content: none;
+}
+
 .reg_account_page .one .container .block .form_acoount .baby_type span:first-child {
   margin-left: 20px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .reg_account_page .one .container .block .form_acoount .baby_type .separator {
-  margin: 0 20px;
+  margin: 0 16px;
 }
 
 .reg_account_page .one .container .block .form_acoount .baby_type label {
@@ -1008,8 +1027,38 @@ body footer .container .copy_social .social a {
   cursor: pointer;
 }
 
+.reg_account_page .one .container .block .form_acoount .baby_type label::before {
+  content: '\2022';
+  margin-left: 6px;
+  position: relative;
+  font-size: 24px;
+}
+
 .reg_account_page .one .container .block .form_acoount .baby_type input:checked + label {
   color: #34C2D1;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type input {
+  background-color: transparent;
+  border: 1px solid #B3B3B3;
+  padding: 4px 8px;
+  min-width: 310px;
+  direction: rtl;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+  font-size: 16px;
+  line-height: 19px;
+  color: #B3B3B3;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type input[type="checkbox"] {
+  min-width: 10px;
+}
+
+.reg_account_page .one .container .block .form_acoount .baby_type ::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .reg_account_page .one .container .block .form_acoount h3 {
