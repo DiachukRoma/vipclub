@@ -482,6 +482,47 @@ body header nav .btn {
   margin: 0;
 }
 
+html header nav .img_container,
+body header nav .img_container {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  background-position: top;
+  background-size: cover;
+}
+
+html header nav .profile .data,
+body header nav .profile .data {
+  margin-top: 15px;
+}
+
+html header nav .profile p,
+body header nav .profile p {
+  color: #fff;
+  margin: 0 15px 0 0;
+}
+
+html header nav .profile p.name,
+body header nav .profile p.name {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+html header nav .profile p.status,
+body header nav .profile p.status {
+  font-size: 13px;
+  line-height: 16px;
+  color: #B3B3B3;
+}
+
+html header .logout .logo,
+body header .logout .logo {
+  margin-right: 30px;
+  color: #fff;
+  font-size: 30px;
+}
+
 html footer,
 body footer {
   background: #000;
@@ -1075,4 +1116,140 @@ body footer .container .copy_social .social a {
 
 .reg_account_page .one .container .block .form_acoount .description {
   margin: 0;
+}
+
+.search_page .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 102px);
+  margin-top: -102px;
+  background: url(../img/search/main_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding-top: 102px;
+}
+
+.search_page .one h1 {
+  font-size: 27px;
+  line-height: 33px;
+}
+
+.search_page .one .container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.search_page .one .container .block_menu {
+  background: #252525;
+  padding: 40px 20px;
+}
+
+.search_page .one .container .block_menu .profile {
+  text-align: center;
+}
+
+.search_page .one .container .block_menu .profile .img_container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100%;
+  background-position: top;
+  background-size: cover;
+  margin: auto;
+}
+
+.search_page .one .container .block_menu .profile .data {
+  color: #ffffff;
+}
+
+.search_page .one .container .block_menu .profile .data .widget_menu {
+  list-style-type: none;
+  text-align: initial;
+  padding: 0 16px;
+}
+
+.search_page .one .container .block_menu .profile .data .widget_menu li {
+  padding: 10px 0;
+}
+
+.search_page .one .container .block_menu .profile .data .widget_menu li a {
+  text-decoration: none;
+  color: #B3B3B3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search_page .one .container .block_menu .profile .data .widget_menu li a picture {
+  height: 20px;
+}
+
+.search_page .one .container .block_menu .profile .data .widget_menu li a span {
+  margin-right: 10px;
+}
+
+.search_page .one .container .block_menu .profile .name {
+  margin: 8px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.search_page .one .container .block_menu .profile .status {
+  font-size: 14px;
+  line-height: 17px;
+  margin: -8px 0 20px;
+}
+
+.search_page .one .container .block_data {
+  padding: 20px;
+}
+
+.search_page .one .container .block_data .filter_1 {
+  color: #a7a7a7;
+  margin-top: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.search_page .one .container .block_data .filter_1 button {
+  padding: 4px 42px;
+}
+
+.search_page .one .container .block_data .filter_1 .single_filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 60px;
+}
+
+.search_page .one .container .block_data .filter_1 .single_filter:not(:nth-child(n+3)) select {
+  width: 220px;
+}
+
+.search_page .one .container .block_data .filter_1 .single_filter label {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.search_page .one .container .block_data .filter_1 .single_filter select {
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #000;
+  border-radius: 5px;
+  border: 1px solid #7a7a7a;
+  padding: 4px 8px;
 }
