@@ -732,100 +732,192 @@ body {
             padding: 0 15px;
             margin: 0 auto;
 
-            .block_menu {
-                background: #252525;
-                padding: 40px 20px;
+            .rightBlock {
+                flex: 0 0 26%;
+                max-width: 26%;
 
-                .profile {
-                    text-align: center;
+                .block_menu {
+                    background: #252525;
+                    padding: 40px 20px;
 
-                    .img_container {
-                        width: 100px;
-                        height: 100px;
-                        position: relative;
-                        border-radius: 100%;
-                        background-position: top;
-                        background-size: cover;
-                        margin: auto;
-                    }
+                    .profile {
+                        text-align: center;
 
-                    .data {
-                        color: #ffffff;
+                        .img_container {
+                            width: 100px;
+                            height: 100px;
+                            position: relative;
+                            border-radius: 100%;
+                            background-position: top;
+                            background-size: cover;
+                            margin: auto;
+                        }
 
-                        .widget_menu {
-                            list-style-type: none;
-                            text-align: initial;
-                            padding: 0 16px;
+                        .data {
+                            color: #ffffff;
 
-                            li {
-                                padding: 10px 0;
+                            .widget_menu {
+                                list-style-type: none;
+                                text-align: initial;
+                                padding: 0 16px;
 
-                                a {
-                                    text-decoration: none;
-                                    color: #B3B3B3;
-                                    display: flex;
-                                    align-items: center;
+                                li {
+                                    padding: 10px 0;
 
-                                    picture {
-                                        height: 20px;
-                                    }
+                                    a {
+                                        text-decoration: none;
+                                        color: #B3B3B3;
+                                        display: flex;
+                                        align-items: center;
 
-                                    span {
-                                        margin-right: 10px;
+                                        picture {
+                                            height: 20px;
+                                        }
+
+                                        span {
+                                            margin-right: 10px;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    .name {
-                        margin: 8px;
-                        font-size: 24px;
-                        line-height: 29px;
-                    }
+                        .name {
+                            margin: 8px;
+                            font-size: 24px;
+                            line-height: 29px;
+                        }
 
-                    .status {
-                        font-size: 14px;
-                        line-height: 17px;
-                        margin: -8px 0 20px;
+                        .status {
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin: -8px 0 20px;
+                        }
+
+                        .bunner img{
+                            width: 100%;
+                        }
                     }
                 }
             }
 
-            .block_data {
-                padding: 20px;
+            .leftBlock {
+                flex: 0 0 74%;
+                max-width: 74%;
 
-                .filter_1 {
-                    color: #a7a7a7;
-                    margin-top: 30px;
-                    align-items: flex-end;
+                .block_data {
+                    padding: 20px;
 
-                    button {
-                        padding: 4px 42px;
+                    .filter {
+                        color: #a7a7a7;
+                        margin-top: 30px;
+                        align-items: flex-end;
+
+                        button {
+                            padding: 4px 42px;
+                        }
+
+                        .single_filter {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 60px;
+
+                            &:not(:nth-child(n+3)) select {
+                                width: 220px;
+                            }
+
+                            label {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
+
+                            select {
+                                font-size: 20px;
+                                line-height: 24px;
+                                color: #FFFFFF;
+                                background-color: #000;
+                                border-radius: 5px;
+                                border: 1px solid #7a7a7a;
+                                padding: 4px 8px;
+                            }
+                        }
                     }
 
-                    .single_filter {
+                    .sort {
                         display: flex;
-                        flex-direction: column;
-                        margin-left: 60px;
+                        align-items: center;
+                        margin-top: 20px;
 
-                        &:not(:nth-child(n+3)) select {
-                            width: 220px;
+                        .result {
+                            font-size: 22px;
+                            line-height: 26px;
+                            color: #B3B3B3;
+                            margin-left: 40px;
                         }
 
-                        label {
-                            font-size: 16px;
-                            line-height: 19px;
-                        }
+                        .sortable {
+                            display: flex;
 
-                        select {
-                            font-size: 20px;
-                            line-height: 24px;
-                            color: #FFFFFF;
-                            background-color: #000;
-                            border-radius: 5px;
-                            border: 1px solid #7a7a7a;
-                            padding: 4px 8px;
+                            label {
+                                color: #fff;
+                                font-size: 18px;
+                                line-height: 22px;
+                                margin-left: 40px;
+                                cursor: pointer;
+                            }
+
+                            input {
+                                display: none;
+                            }
+
+                            input:checked+label {
+                                color: #34C2D1;
+                            }
+                        }
+                    }
+
+                    .users {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        .single_user {
+                            width: 208px;
+                            height: 246px;
+                            margin-top: 30px;
+                            position: relative;
+
+                            .photo_user {
+                                overflow: hidden;
+                                width: 208px;
+                                height: 246px;
+
+                                img {
+                                    position: relative;
+                                    width: 100%;
+                                }
+                            }
+
+                            .user_datas {
+                                position: absolute;
+                                bottom: 0;
+                                background-color: rgba(0, 0, 0, 0.8);
+                                width: calc(100% - 20px);
+                                padding: 8px 10px;
+
+                                p {
+                                    margin: 0;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    color: #FFFFFF;
+
+                                    &.city {
+                                        font-size: 14px;
+                                        line-height: 17px;
+                                        color: #34C2D1;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

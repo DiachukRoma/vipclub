@@ -4,70 +4,221 @@
 
     <section class="one">
         <div class="container">
-            <div class="row d-flex">
-                <div class="block_menu">
-                    <div class="profile">
-                        <div class="img_container" style="background-image: url(../img/accoutnt/profile.jpg);"></div>
-                        <div class="data">
-                            <p class="name">שלום ישראל</p>
-                            <p class="status blue">כניסת חברים</p>
+            <div class="row d-flex fw-wrap">
+                <div class="rightBlock">
+                    <div class="block_menu">
+                        <div class="profile">
+                            <div class="img_container" style="background-image: url(../img/accoutnt/profile.jpg);"></div>
+                            <div class="data">
+                                <p class="name">שלום ישראל</p>
+                                <p class="status blue">כניסת חברים</p>
 
-                            <ul class="widget_menu">
-                                <li><a href="#"><img src="./img/search/icon_0.svg" alt=""> <span>עריכת פרופיל</span></a>
-                                </li>
-                                <li><a href="#"><img src="./img/search/icon_1.svg" alt=""> <span>החברים שלי</span></a>
-                                </li>
-                                <li><a href="#"><img src="./img/search/icon_2.svg" alt=""> <span>המועדפים שלי</span></a>
-                                </li>
-                                <li><a href="#"><img src="./img/search/icon_3.svg" alt=""> <span>הוסיפו אותי
-                                            למועדפים</span></a></li>
-                                <li><a href="#"><img src="./img/search/icon_4.svg" alt=""> <span>הוסיפו אותי
-                                            לחברים</span></a></li>
-                                <li><a href="#"><img src="./img/search/icon_5.svg" alt=""> <span>הרשימה השחורה
-                                            שלי</span></a></li>
-                            </ul>
+                                <ul class="widget_menu">
+                                    <li><a href="#"><img src="./img/search/icon_0.svg" alt=""> <span>עריכת פרופיל</span></a>
+                                    </li>
+                                    <li><a href="#"><img src="./img/search/icon_1.svg" alt=""> <span>החברים שלי</span></a>
+                                    </li>
+                                    <li><a href="#"><img src="./img/search/icon_2.svg" alt=""> <span>המועדפים שלי</span></a>
+                                    </li>
+                                    <li><a href="#"><img src="./img/search/icon_3.svg" alt=""> <span>הוסיפו אותי
+                                                למועדפים</span></a></li>
+                                    <li><a href="#"><img src="./img/search/icon_4.svg" alt=""> <span>הוסיפו אותי
+                                                לחברים</span></a></li>
+                                    <li><a href="#"><img src="./img/search/icon_5.svg" alt=""> <span>הרשימה השחורה
+                                                שלי</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="bunner"><img src="./img/search/banner.jpg" alt=""></div>
+                            <div class="bunner"><img src="./img/search/banner.jpg" alt=""></div>
                         </div>
-                        <div class="bunner"><img src="./img/search/banner.jpg" alt=""></div>
-                        <div class="bunner"><img src="./img/search/banner.jpg" alt=""></div>
-                    </div>
+                    </div>                    
                 </div>
-                <div class="block_data">
-                    <h1>חיפוש התאמות</h1>
-                    <div class="filter_1 d-flex">
-                        <div class="single_filter">
-                            <label for="looking">מחפש/ת</label>
-                            <select name="looking" id="looking">
-                                <option value="1">גבר</option>
-                                <option value="2">אִשָׁה</option>
-                            </select>
+                <div class="leftBlock">
+                    <div class="block_data">
+                        <h1>חיפוש התאמות</h1>
+                        <form class="filter d-flex">
+                            <div class="single_filter">
+                                <label for="looking">מחפש/ת</label>
+                                <select name="looking" id="looking">
+                                    <option value="1">גבר</option>
+                                    <option value="2">אִשָׁה</option>
+                                </select>
+                            </div>
+                            <div class="single_filter">
+                                <label for="palces">מאזור</label>
+                                <select name="palces" id="palces">
+                                    <option value="1">המרכז</option>
+                                    <option value="2">המרכז 2</option>
+                                </select>
+                            </div>
+                            <div class="single_filter">
+                                <label for="from">בגילאי</label>
+                                <select name="from" id="from">
+                                    <option value="1">18</option>
+                                    <option value="2">19</option>
+                                    <option value="3">20</option>
+                                    <option value="4">90</option>
+                                </select>
+                            </div>
+                            <div class="single_filter">
+                                <label for="to">עד</label>
+                                <select name="to" id="to">
+                                    <option value="1">60</option>
+                                    <option value="2">70</option>
+                                    <option value="3">80</option>
+                                    <option value="4">90</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn_blue">חיפוש</button>
+                        </form>
+                        <div class="sort">
+                            <div class="result">נמצו <span>165</span> חברים</div>
+                            <div class="sortable">
+                                <input type="radio" name="users" id="new_user" checked>
+                                <label for="new_user">חדשים ביותר</label>
+
+                                <input type="radio" name="users" id="online_user">
+                                <label for="online_user">אונליין בלבד</label>
+
+                                <input type="radio" name="users" id="popular_user">
+                                <label for="popular_user">נצפים ביותר</label>
+                            </div>
                         </div>
-                        <div class="single_filter">
-                            <label for="palces">מאזור</label>
-                            <select name="palces" id="palces">
-                                <option value="1">המרכז</option>
-                                <option value="2">המרכז 2</option>
-                            </select>
+                        <div class="users">
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_2.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_3.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_2.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_3.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_2.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_3.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_2.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single_user">
+                                <a href="#">
+                                    <div class="photo_user">
+                                        <img src="./img/search/user_3.jpg" alt="">
+                                    </div>
+                                    <div class="user_datas">
+                                        <p class="name">אולגה שלמן, <span class="age">25</span></p>
+                                        <p class="city">תל אביב</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="single_filter">
-                            <label for="from">בגילאי</label>
-                            <select name="from" id="from">
-                                <option value="1">18</option>
-                                <option value="2">19</option>
-                                <option value="3">20</option>
-                                <option value="4">90</option>
-                            </select>
-                        </div>
-                        <div class="single_filter">
-                            <label for="to">עד</label>
-                            <select name="to" id="to">
-                                <option value="1">60</option>
-                                <option value="2">70</option>
-                                <option value="3">80</option>
-                                <option value="4">90</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn_blue">חיפוש</button>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
