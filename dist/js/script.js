@@ -19,4 +19,18 @@ $(document).ready(function () {
             }
         }
     });
+
+    $(document).mouseup(function (e) {
+        let classPop = $('.popup').hasClass('active');
+        if (classPop) {
+            let div = $(".window-pop");
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.popup').removeClass('active');
+            }
+        }
+    });
+    $('.popUpBtn').click(function () {
+        let className = $(this).data('pop');
+        $(`.pop_${className}`).addClass('active');
+    });
 });
