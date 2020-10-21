@@ -1,5 +1,6 @@
 @import './owl/owl.theme.default';
 @import './owl/owl.carousel';
+@import './mixin';
 
 @font-face {
     font-family: 'Varela Round';
@@ -29,12 +30,22 @@ body {
         color: #FFFFFF;
         margin: 0;
         font-weight: 400;
+
+        @include sm {
+            font-size: 32px;
+            line-height: 32px;
+        }
     }
 
     h3 {
         font-size: 40px;
         line-height: 48px;
         font-weight: 400;
+
+        @include sm {
+            font-size: 28px;
+            line-height: 28px;
+        }
     }
 
     .blue {
@@ -129,6 +140,11 @@ body {
                 font-size: 20px;
                 line-height: 24px;
                 margin: 0;
+
+                @include sm {
+                    padding: 6px 20px;
+                    font-size: 16px;
+                }
             }
 
             .img_container {
@@ -161,13 +177,38 @@ body {
                         color: #B3B3B3;
                     }
                 }
-            }
-        }
 
-        .logout .logo {
-            margin-right: 30px;
-            color: #fff;
-            font-size: 30px;
+                @include md {
+                    display: none;
+                }
+            }
+
+            .logout {
+                @include md {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                .logo {
+                    margin-right: 30px;
+                    color: #fff;
+                    font-size: 30px;
+                }
+            }
+
+            .burger_menu {
+                display: none;
+                cursor: pointer;
+                margin-left: 20px;
+
+                @include md {
+                    display: block;
+                }
+
+                img {
+                    margin-top: 5px;
+                }
+            }
         }
     }
 
@@ -186,12 +227,25 @@ body {
                 justify-content: space-between;
                 padding: 10px 0;
 
-                li a {
-                    text-decoration: none;
-                    color: #D8D8D8;
-                    font-size: 16px;
-                    line-height: 19px;
-                    text-align: center;
+                @include sm {
+                    flex-flow: wrap;
+                    max-width: 200px;
+                    margin: auto;
+                }
+
+                li {
+                    @include sm {
+                        width: 50%;
+                        margin-top: 15px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #D8D8D8;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+                    }
                 }
             }
 
@@ -199,6 +253,10 @@ body {
                 border-top: 3px solid #3a3a3a;
                 margin-top: 50px;
                 padding: 20px 0 0;
+
+                @include sm {
+                    margin-top: 25px;
+                }
 
                 .social a {
                     margin-left: 60px;
@@ -216,6 +274,10 @@ body {
         line-height: 36px;
         color: #169EAC;
         text-decoration: none;
+
+        @include sm {
+            font-size: 20px;
+        }
     }
 
     .one {
@@ -230,10 +292,31 @@ body {
             url('../img/home/home_one.png') center center no-repeat;
         background-size: cover;
 
+        @include md {
+            min-height: 100vh;
+            background-position-x: 10%;
+        }
+
+        h1 {
+            @include md {
+                text-align: center;
+            }
+
+            @include sm {
+                font-size: 30px;
+                line-height: 29px;
+            }
+        }
+
         .description {
             font-size: 40px;
             line-height: 48px;
             margin: 14px 0 0;
+
+            @include sm {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
 
         .gradient {
@@ -247,8 +330,19 @@ body {
             }
         }
 
-        .btns a {
-            margin: 10px;
+        .btns {
+            @include sm {
+                flex-wrap: wrap;
+            }
+
+            a {
+                margin: 10px;
+
+                @include sm {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
         }
     }
 
@@ -262,20 +356,46 @@ body {
             padding: 0 15px;
             margin: auto;
 
-            .item {
-                max-width: 276px;
-
-                .title {
-                    font-size: 27px;
-                    line-height: 33px;
-                    max-width: 200px;
-                    margin: 20px auto 0;
+            .row {
+                @include lg {
+                    flex-wrap: wrap;
                 }
 
-                .description {
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #fff;
+                .item {
+                    max-width: 276px;
+
+                    @include lg {
+                        margin-top: 20px;
+                    }
+
+                    .title {
+                        font-size: 27px;
+                        line-height: 33px;
+                        max-width: 200px;
+                        margin: 20px auto 0;
+                    }
+
+                    .description {
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .mob-slider {
+                .owl-item {
+                    @include rwd (600) {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                img {
+                    @include rwd (600) {
+                        max-width: 90px;
+                        margin: auto;
+                    }
                 }
             }
         }
@@ -294,52 +414,77 @@ body {
                 font-size: 36px;
                 line-height: 43px;
                 font-weight: 400;
+
+                @include sm {
+                    text-align: center;
+                }
             }
 
-            .block {
-                width: 50%;
+            form {
+                .row {
+                    @include lg {
+                        flex-wrap: wrap;
+                    }
 
-                label {
-                    margin-left: 54px;
-                    font-size: 22px;
-                    line-height: 26px;
-                }
+                    .block {
+                        width: 50%;
 
-                select {
-                    background-color: #000;
-                    color: #fff;
-                    padding: 6px;
-                    width: 220px;
-                    border-radius: 5px;
-                    outline: none;
-                    cursor: pointer;
-                    margin-right: 8px;
-                    border: 1px solid #787878;
-                    font-size: 22px;
-                    line-height: 26px;
-                }
+                        @include rwd(1130) {
+                            width: fit-content;
+                            margin-top: 20px;
+                        }
 
-                input {
-                    border-radius: 5px;
-                    outline: none;
-                    background-color: #000;
-                    color: #fff;
-                    padding: 6px;
-                    border: 1px solid #787878;
-                    font-size: 22px;
-                    line-height: 26px;
-                    width: 90px;
-                }
+                        label {
+                            margin-left: 54px;
+                            font-size: 22px;
+                            line-height: 26px;
 
-                button {
-                    border-radius: 5px;
-                    outline: none;
-                    cursor: pointer;
-                    color: #fff;
-                    padding: 5.5px 35px;
-                    font-weight: 400;
-                    font-size: 24px;
-                    line-height: 29px;
+                            @include sm {
+                                margin-left: 12px;
+                            }
+                        }
+
+                        select {
+                            background-color: #000;
+                            color: #fff;
+                            padding: 6px;
+                            width: 220px;
+                            border-radius: 5px;
+                            outline: none;
+                            cursor: pointer;
+                            margin-right: 8px;
+                            border: 1px solid #787878;
+                            font-size: 22px;
+                            line-height: 26px;
+                        }
+
+                        input {
+                            border-radius: 5px;
+                            outline: none;
+                            background-color: #000;
+                            color: #fff;
+                            padding: 6px;
+                            border: 1px solid #787878;
+                            font-size: 22px;
+                            line-height: 26px;
+                            width: 90px;
+                        }
+
+                        button {
+                            border-radius: 5px;
+                            outline: none;
+                            cursor: pointer;
+                            color: #fff;
+                            padding: 5.5px 35px;
+                            font-weight: 400;
+                            font-size: 24px;
+                            line-height: 29px;
+
+                            @include sm {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -357,6 +502,10 @@ body {
             .item {
                 max-width: 160px;
                 margin: 5px 8px;
+
+                @include sm {
+                    max-width: 100px;
+                }
 
                 img {
                     width: 100%;
@@ -407,12 +556,26 @@ body {
                         top: 60px;
                         position: absolute;
                         right: -30px;
+
+                        @include md {
+                            right: 0;
+                        }
                     }
 
                     &.owl-next {
                         top: 60px;
                         position: absolute;
                         left: -30px;
+
+                        @include md {
+                            left: 0;
+                        }
+                    }
+
+                    img {
+                        @include md {
+                            width: 35px;
+                        }
                     }
                 }
 
@@ -431,6 +594,10 @@ body {
                 font-size: 31px;
                 line-height: 37px;
                 color: #FFFFFF;
+
+                @include sm {
+                    font-size: 20px;
+                }
             }
 
         }
@@ -451,6 +618,11 @@ body {
             url('../img/home/home_one.png') center center no-repeat;
         background-size: cover;
 
+        @include sm {
+            min-height: 100vh;
+            background-position-x: 10%;
+        }
+
         .container {
             max-width: 1310px;
             width: 100%;
@@ -460,10 +632,22 @@ body {
             .row {
                 max-width: 630px;
 
+                h1 {
+                    @include sm {
+                        font-size: 45px;
+                    }
+                }
+
                 .description {
                     font-size: 26px;
                     line-height: 36px;
                     color: #fff;
+
+                    @include sm {
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin: 30px 20px;
+                    }
                 }
             }
         }
@@ -480,6 +664,12 @@ body {
             text-align: center;
             max-width: 530px;
             margin: auto;
+
+            @include sm {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0 20px;
+            }
         }
     }
 
@@ -493,6 +683,12 @@ body {
             font-size: 20px;
             max-width: 590px;
             margin: auto;
+
+            @include sm {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0 20px;
+            }
         }
 
         .row:last-child {
@@ -500,6 +696,11 @@ body {
 
             a {
                 margin-right: 20px;
+
+                @include sm {
+                    margin: 30px;
+                    display: block;
+                }
             }
         }
     }

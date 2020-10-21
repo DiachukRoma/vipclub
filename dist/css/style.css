@@ -20,7 +20,7 @@
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
-  background: #869791;
+  background: #169eac;
   color: #FFF;
   text-decoration: none;
 }
@@ -41,6 +41,7 @@
 
 .owl-theme .owl-dots .owl-dot {
   display: inline-block;
+  outline: none;
   zoom: 1;
   *display: inline;
 }
@@ -60,7 +61,7 @@
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #869791;
+  background: #169eac;
 }
 
 /*
@@ -537,11 +538,23 @@ body header nav .profile p.status {
   color: #B3B3B3;
 }
 
-html header .logout .logo,
-body header .logout .logo {
+html header nav .logout .logo,
+body header nav .logout .logo {
   margin-right: 30px;
   color: #fff;
   font-size: 30px;
+}
+
+html header nav .burger_menu,
+body header nav .burger_menu {
+  display: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+html header nav .burger_menu img,
+body header nav .burger_menu img {
+  margin-top: 5px;
 }
 
 html footer,
@@ -649,18 +662,18 @@ body footer .container .copy_social .social a {
   margin: auto;
 }
 
-.home_page .two .container .item {
+.home_page .two .container .row .item {
   max-width: 276px;
 }
 
-.home_page .two .container .item .title {
+.home_page .two .container .row .item .title {
   font-size: 27px;
   line-height: 33px;
   max-width: 200px;
   margin: 20px auto 0;
 }
 
-.home_page .two .container .item .description {
+.home_page .two .container .row .item .description {
   font-size: 18px;
   line-height: 24px;
   color: #fff;
@@ -683,17 +696,17 @@ body footer .container .copy_social .social a {
   font-weight: 400;
 }
 
-.home_page .three .container .block {
+.home_page .three .container form .row .block {
   width: 50%;
 }
 
-.home_page .three .container .block label {
+.home_page .three .container form .row .block label {
   margin-left: 54px;
   font-size: 22px;
   line-height: 26px;
 }
 
-.home_page .three .container .block select {
+.home_page .three .container form .row .block select {
   background-color: #000;
   color: #fff;
   padding: 6px;
@@ -707,7 +720,7 @@ body footer .container .copy_social .social a {
   line-height: 26px;
 }
 
-.home_page .three .container .block input {
+.home_page .three .container form .row .block input {
   border-radius: 5px;
   outline: none;
   background-color: #000;
@@ -719,7 +732,7 @@ body footer .container .copy_social .social a {
   width: 90px;
 }
 
-.home_page .three .container .block button {
+.home_page .three .container form .row .block button {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -1836,4 +1849,201 @@ body footer .container .copy_social .social a {
   position: absolute;
   left: 14px;
   top: 14px;
+}
+
+@media (max-width: 1130px) {
+  .home_page .three .container form .row .block {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home_page .two .container .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .home_page .two .container .row .item {
+    margin-top: 20px;
+  }
+
+  .home_page .three .container form .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  html header nav .profile,
+  body header nav .profile {
+    display: none;
+  }
+
+  html header nav .logout,
+  body header nav .logout {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  html header nav .burger_menu,
+  body header nav .burger_menu {
+    display: block;
+  }
+
+  .home_page .one {
+    min-height: 100vh;
+    background-position-x: 10%;
+  }
+
+  .home_page .one h1 {
+    text-align: center;
+  }
+
+  .home_page .five .container .owl-nav button.owl-prev {
+    right: 0;
+  }
+
+  .home_page .five .container .owl-nav button.owl-next {
+    left: 0;
+  }
+
+  .home_page .five .container .owl-nav button img {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_page .two .container .mob-slider .owl-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .home_page .two .container .mob-slider img {
+    max-width: 90px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  html h1,
+  body h1 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  html h3,
+  body h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  html header nav .btn,
+  body header nav .btn {
+    padding: 6px 20px;
+    font-size: 16px;
+  }
+
+  html footer .container ul,
+  body footer .container ul {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    max-width: 200px;
+    margin: auto;
+  }
+
+  html footer .container ul li,
+  body footer .container ul li {
+    width: 50%;
+    margin-top: 15px;
+  }
+
+  html footer .container .copy_social,
+  body footer .container .copy_social {
+    margin-top: 25px;
+  }
+
+  .home_page .d_link a {
+    font-size: 20px;
+  }
+
+  .home_page .one h1 {
+    font-size: 30px;
+    line-height: 29px;
+  }
+
+  .home_page .one .description {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .home_page .one .btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .home_page .one .btns a {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .home_page .three .container h4 {
+    text-align: center;
+  }
+
+  .home_page .three .container form .row .block label {
+    margin-left: 12px;
+  }
+
+  .home_page .three .container form .row .block button {
+    margin-top: 20px;
+  }
+
+  .home_page .four .container .item {
+    max-width: 100px;
+  }
+
+  .home_page .five .container .d_link {
+    font-size: 20px;
+  }
+
+  .about_page .one {
+    min-height: 100vh;
+    background-position-x: 10%;
+  }
+
+  .about_page .one .container .row h1 {
+    font-size: 45px;
+  }
+
+  .about_page .one .container .row .description {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 30px 20px;
+  }
+
+  .about_page .two p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 20px;
+  }
+
+  .about_page .three p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 20px;
+  }
+
+  .about_page .three .row:last-child a {
+    margin: 30px;
+    display: block;
+  }
 }

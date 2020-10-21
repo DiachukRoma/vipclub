@@ -11,14 +11,26 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
-                items: 2
+            540: {
+                items: 2,
+                center: false,
             },
             992: {
                 items: 3
             }
         }
     });
+
+    if ($(window).width() <= 600) {
+        $('.two .mob-slider').removeClass('d-flex jc-between').addClass('owl-carousel owl-theme').owlCarousel({
+            loop: true,
+            rtl: true,
+            center: true,
+            dots: true,
+            items: 1,
+            autoHeight: true
+        });
+    }
 
     $(document).mouseup(function (e) {
         let classPop = $('.popup').hasClass('active');
